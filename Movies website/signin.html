@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Your other CSS and external links -->
+
+    <style>
+        /* Additional CSS for sign-in form */
+        .sign-in-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px; /* Increased padding */
+            border-radius: 10px; /* Increased border-radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url('bg2.jpg');
+            width: 400px; /* Increased width */
+        }
+
+        .sign-in-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sign-in-container label {
+            display: block;
+            margin-bottom: 10px; /* Increased margin */
+        }
+
+        .sign-in-container input[type="text"],
+        .sign-in-container input[type="password"],
+        .sign-in-container input[type="submit"] {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            margin-bottom: 20px; /* Increased margin-bottom */
+            border: 1px solid #ccc;
+            border-radius: 8px; /* Increased border-radius */
+            box-sizing: border-box;
+            font-size: 16px; /* Increased font size */
+        }
+
+        .sign-in-container input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sign-in-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML code -->
+
+    <!-- Sign-in form -->
+    <div class="sign-in-container">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Sign In">
+        </form>
+    </div>
+
+    <!-- Your existing HTML code -->
+
+    <!-- JavaScript for sign-in form submission -->
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get username and password from form
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Here you can perform authentication with the username and password
+            // For demonstration, log the username and password to the console
+            console.log('Username: ' + username);
+            console.log('Password: ' + password);
+
+            // You can also redirect the user to another page after successful sign-in
+            // window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
